@@ -343,12 +343,11 @@ a:hover .Texto, a:focus .Texto {
 /* Notificações* */
 
 #not_texto{
-    color:white; 
     text-shadow: 2px 2px 8px black; 
     margin-bottom:20px;
 }
 
-#caixa {
+.caixa {
     background-color: #ffffff; 
     border-radius: 8px; 
     padding: 20px; 
@@ -356,3 +355,4 @@ a:hover .Texto, a:focus .Texto {
     width: 100%; 
     text-align:left;
 }
+
