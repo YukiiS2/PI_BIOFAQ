@@ -347,7 +347,7 @@ a:hover .Texto, a:focus .Texto {
     margin-bottom:20px;
 }
 
-.caixa {
+.Caixa {
     background-color: #ffffff; 
     border-radius: 8px; 
     padding: 20px; 
@@ -355,4 +355,5 @@ a:hover .Texto, a:focus .Texto {
     width: 100%; 
     text-align:left;
 }
+
 
