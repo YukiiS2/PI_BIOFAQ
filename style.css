@@ -342,7 +342,7 @@ a:hover .Texto, a:focus .Texto {
 
 /* Notificações* */
 
-#not_texto{
+#not_texto {
     text-shadow: 2px 2px 8px black; 
     margin-bottom:20px;
 }
@@ -355,5 +355,6 @@ a:hover .Texto, a:focus .Texto {
     width: 100%; 
     text-align:left;
 }
+
 
 
