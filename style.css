@@ -23,7 +23,7 @@ body {
     box-sizing: border-box;
 }
 
-.brand-logo {
+.logo-marca { 
     text-decoration: underline;
 }
 
@@ -88,12 +88,12 @@ svg:hover + .Texto, svg:focus + .Texto {
     opacity: 1;
 }
 
-.drop {
+.menu-suspenso { 
     position: relative;
     display: inline-block;
 }
 
-.listadropdown {
+.lista-suspensa { 
     display: none;
     position: absolute;
     background-color: #3f565c;
@@ -108,11 +108,11 @@ svg:hover + .Texto, svg:focus + .Texto {
     margin-top: 10px;
 }
 
-.drop.open .listadropdown {
+.menu-suspenso.aberto .lista-suspensa { 
     display: block;
 }
 
-.listadropdown a {
+.lista-suspensa a { 
     color: #e0eef1;
     padding: 12px 16px;
     text-decoration: none;
@@ -122,7 +122,7 @@ svg:hover + .Texto, svg:focus + .Texto {
     white-space: nowrap;
 }
 
-.listadropdown a:hover {
+.lista-suspensa a:hover { 
     background-color: #4a656d;
     color: #fff;
 }
@@ -142,7 +142,7 @@ svg:hover + .Texto, svg:focus + .Texto {
     pointer-events: none;
 }
 
-#barra_pesquisa.active {
+#barra_pesquisa.ativa { 
     transform: translateY(100%) translateX(65%);
     opacity: 1;
     pointer-events: auto;
@@ -157,16 +157,6 @@ svg:hover + .Texto, svg:focus + .Texto {
     outline: none;
     background: #fff;
     box-shadow: 0 2px 8px rgba(50,69,75,0.08);
-}
-
-/* Acessibilidade */
-
-#olho {
-    border-radius: 20%;
-    position: fixed;
-    top: 45%;
-    right: 10px;
-    z-index: 2; 
 }
 
 /* Pagina Inicial */
@@ -252,6 +242,16 @@ svg:hover + .Texto, svg:focus + .Texto {
 
 /* Login & Registro */
 
+.Conteudo-Login { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 80px; 
+    box-sizing: border-box;
+}
+
 #biofaq_log {
     font-size: 60px;
     margin-bottom: 30px;
@@ -326,6 +326,14 @@ svg:hover + .Texto, svg:focus + .Texto {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+.Caixa a {
+    color: #32454b;
+}
+
+.Caixa a:hover {
+    color: #5a7b7f;
+}
+
 /* Aulas & Questões */
 
 .Conteudo-Aulas {
@@ -345,7 +353,7 @@ svg:hover + .Texto, svg:focus + .Texto {
     margin-bottom: 20px;
 }
 
-.aulas-grid {
+.grade-aulas { 
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
@@ -375,7 +383,7 @@ svg:hover + .Texto, svg:focus + .Texto {
 
 /* Configurações */
 
-.config-container {
+.container-config { 
     padding: 100px 40px 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -404,7 +412,7 @@ svg:hover + .Texto, svg:focus + .Texto {
     color: #555;
 }
 
-.config-main {
+.config-principal { 
     display: flex;
     gap: 40px;
 }
@@ -425,7 +433,7 @@ svg:hover + .Texto, svg:focus + .Texto {
     overflow: hidden;
 }
 
-.btn-config {
+.botao-config { 
     display: block;
     width: 100%;
     padding: 15px;
@@ -438,11 +446,11 @@ svg:hover + .Texto, svg:focus + .Texto {
     transition: background-color 0.2s;
 }
 
-.btn-config:last-child {
+.botao-config:last-child { 
     border-bottom: none;
 }
 
-.btn-config:hover {
+.botao-config:hover { 
     background-color: #f0f0f0;
 }
 
@@ -450,7 +458,7 @@ svg:hover + .Texto, svg:focus + .Texto {
     margin-bottom: 20px;
 }
 
-.historico-carousel {
+.carrossel-historico { 
     display: flex;
     gap: 20px;
     overflow-x: auto;
@@ -460,11 +468,11 @@ svg:hover + .Texto, svg:focus + .Texto {
     background-color: #fff;
 }
 
-.historico-carousel::-webkit-scrollbar {
+.carrossel-historico::-webkit-scrollbar { 
     height: 8px;
 }
 
-.historico-carousel::-webkit-scrollbar-thumb {
+.carrossel-historico::-webkit-scrollbar-thumb { 
     background: #ccc;
     border-radius: 4px;
 }
@@ -485,11 +493,15 @@ svg:hover + .Texto, svg:focus + .Texto {
     align-items: center;
 }
 
-.modal.show, .modal-config.show {
+#popup-pesquisa { 
+    z-index: 50;
+}
+
+.modal.mostrar, .modal-config.mostrar { 
     display: flex;
 }
 
-.modal-content {
+.conteudo-modal { 
     background-color: #fefefe;
     padding: 20px;
     border: 1px solid #888;
@@ -502,7 +514,7 @@ svg:hover + .Texto, svg:focus + .Texto {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.modal-overlay {
+.sobreposicao-modal { 
     position: fixed;
     top: 0;
     left: 0;
@@ -512,7 +524,7 @@ svg:hover + .Texto, svg:focus + .Texto {
     z-index: -1;
 }
 
-.close-button {
+.botao-fechar { 
     color: #aaa;
     position: absolute;
     top: 10px;
@@ -522,23 +534,23 @@ svg:hover + .Texto, svg:focus + .Texto {
     cursor: pointer;
 }
 
-.close-button:hover,
-.close-button:focus {
+.botao-fechar:hover,
+.botao-fechar:focus { 
     color: black;
 }
 
-.video-container {
+.container-video { 
     flex: 2;
 }
 
-.video-player {
+.reprodutor-video { 
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%; 
     background-color: #000;
     position: relative;
 }
 
-.video-player video {
+.reprodutor-video video { 
     position: absolute;
     top: 0;
     left: 0;
@@ -559,25 +571,25 @@ svg:hover + .Texto, svg:focus + .Texto {
 
 /* Questão Popup */
 
-#quest-content {
+#conteudo-questao { 
     color: #32454b;
     max-height: 500px;
     overflow-y: auto;
     width: 100%;
 }
 
-#quest-content h3 {
+#conteudo-questao h3 { 
     margin-top: 0;
     border-bottom: 2px solid #afd1cf;
     padding-bottom: 10px;
 }
 
-#quest-content .pergunta {
+#conteudo-questao .pergunta { 
     margin-top: 20px;
     font-weight: bold;
 }
 
-#quest-content .alternativas {
+#conteudo-questao .alternativas { 
     list-style-type: none;
     padding-left: 0;
     display: flex;
@@ -585,7 +597,7 @@ svg:hover + .Texto, svg:focus + .Texto {
     gap: 5px;
 }
 
-#quest-content .alternativas li {
+#conteudo-questao .alternativas li { 
     margin: 8px 0;
     padding: 10px;
     border: 1px solid #ddd;
@@ -594,11 +606,11 @@ svg:hover + .Texto, svg:focus + .Texto {
     transition: background-color 0.2s;
 }
 
-#quest-content .alternativas li:hover {
+#conteudo-questao .alternativas li:hover { 
     background-color: #f0f0f0;
 }
 
-#quest-content .alternativas li.selected {
+#conteudo-questao .alternativas li.selecionada { 
     background-color: #32454b;
     color: #fff;
     font-weight: bold;
@@ -606,7 +618,7 @@ svg:hover + .Texto, svg:focus + .Texto {
 
 /* Modal de Configurações */
 
-.modal-config-content {
+.conteudo-modal-config { 
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
@@ -618,25 +630,24 @@ svg:hover + .Texto, svg:focus + .Texto {
     box-sizing: border-box;
 }
 
-.modal-config-content h2 {
+.conteudo-modal-config h2 { 
     margin-top: 0;
     color: #32454b;
 }
 
-.modal-config-content label {
-    margin-top: 15px;
+.conteudo-modal-config label { 
     margin-bottom: 5px;
     color: #333;
 }
 
-.modal-config-content input {
+.conteudo-modal-config input { 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
 }
 
-.modal-config-content button {
+.conteudo-modal-config button { 
     margin-top: 20px;
     padding: 10px;
     border: none;
@@ -648,7 +659,7 @@ svg:hover + .Texto, svg:focus + .Texto {
     transition: background-color 0.2s;
 }
 
-.modal-config-content button:hover {
+.conteudo-modal-config button:hover { 
     background-color: #5a7b7f;
 }
 
@@ -672,13 +683,13 @@ svg:hover + .Texto, svg:focus + .Texto {
 }
 
 @media (max-width: 900px) {
-    .config-main {
+    .config-principal { 
         flex-direction: column;
     }
 }
 
 @media (max-width: 768px) {
-    .modal-content {
+    .conteudo-modal { 
         flex-direction: column;
         max-width: 90vw;
         max-height: 90vh;
@@ -686,16 +697,16 @@ svg:hover + .Texto, svg:focus + .Texto {
     .aula-escrita {
         max-height: 200px;
     }
-    #quest-content {
+    #conteudo-questao { 
         max-height: 70vh;
     }
-    .modal-config-content {
+    .conteudo-modal-config { 
         max-width: 90vw;
     }
 }
 
 @media (max-width: 768px) {
-    .close-button {
+    .botao-fechar { 
         display: none;
     }
 }
