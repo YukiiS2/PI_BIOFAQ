@@ -381,6 +381,74 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function configurarTTS() {
+        let ttsAtivo = false;
+        const synth = window.speechSynthesis;
+        const tagsPermitidas = ['P', 'H1', 'H2', 'H3', 'A', 'LI', 'SPAN', 'BUTTON', 'LABEL', 'INPUT', 'TH', 'TD', 'SVG'];
+
+        const navHome = document.querySelector('#topoesq a, #topoesq span');
+        if (navHome) navHome.setAttribute('aria-label', 'Página Inicial');
+
+        const navSearch = document.querySelector('#topodir > li > a');
+        if (navSearch) navSearch.setAttribute('aria-label', 'Barra de Pesquisa');
+
+        const navConteudo = document.getElementById('aulas');
+        if (navConteudo) navConteudo.setAttribute('aria-label', 'Conteúdos');
+
+        const navConta = document.querySelector('a[href="login.html"], a[href="config.html"]');
+        if (navConta) navConta.setAttribute('aria-label', 'Conta');
+
+        function falar(texto) {
+            if (synth.speaking) synth.cancel();
+            const utterance = new SpeechSynthesisUtterance(texto);
+            utterance.lang = 'pt-BR';
+            synth.speak(utterance);
+        }
+
+        function apitar() {
+            const ctx = new (window.AudioContext || window.webkitAudioContext)();
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.frequency.setValueAtTime(800, ctx.currentTime);
+            gain.gain.setValueAtTime(0.05, ctx.currentTime);
+            osc.start();
+            osc.stop(ctx.currentTime + 0.1);
+        }
+
+        if (document.title === "Página Inicial" && !sessionStorage.getItem('tts_aviso_mostrado')) {
+            setTimeout(() => {
+                falar("Para ativar o leitor de tela aperte J");
+                sessionStorage.setItem('tts_aviso_mostrado', 'true');
+            }, 500);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key.toLowerCase() === 'j') {
+                ttsAtivo = !ttsAtivo;
+                falar(ttsAtivo ? "Leitor de tela ativado" : "Leitor de tela desativado");
+            }
+        });
+
+        document.body.addEventListener('mouseover', (e) => {
+            if (!ttsAtivo) return;
+            let target = e.target;
+            if (target.tagName === 'path') target = target.closest('svg');
+            if (target.tagName === 'svg' && target.parentElement.tagName === 'A') target = target.parentElement;
+
+            if (tagsPermitidas.includes(target.tagName) || (target.tagName === 'svg' && target.hasAttribute('aria-label'))) {
+                apitar();
+                const texto = target.getAttribute('aria-label') || target.innerText || target.value || target.alt;
+                if (texto && texto.trim()) falar(texto);
+            }
+        });
+
+        document.body.addEventListener('mouseout', (e) => {
+            if (ttsAtivo) synth.cancel();
+        });
+    }
+
     // Inicialização Geral do Site
 
     function inicializarSite() {
@@ -396,6 +464,7 @@ document.addEventListener('DOMContentLoaded', function() {
         configurarInteracaoPopups();
         configurarPopupsConfig();
         configurarInteracaoQuiz();
+        configurarTTS();
     }
     
     inicializarSite();
