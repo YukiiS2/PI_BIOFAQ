@@ -250,10 +250,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (linkConta) {
                 linkConta.href = 'login.html';
             }
-            if (window.location.pathname.endsWith('config.html') || window.location.pathname.endsWith('not.html')) {
-                alert("Você precisa estar logado para ver esta página.");
-                window.location.href = 'login.html';
-            }
         }
     }
 

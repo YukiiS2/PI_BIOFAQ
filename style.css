@@ -308,32 +308,6 @@ svg:hover + .Texto, svg:focus + .Texto {
     background-color: #5a7b7f;
 }
 
-/* Notificações */
-
-#not_texto {
-    color: #32454b;
-    margin-bottom: 20px;
-}
-
-.Caixa {
-    color: #32454b;
-    background-color: #ffffff; 
-    border-radius: 8px; 
-    padding: 20px; 
-    max-width: 600px; 
-    width: 100%; 
-    text-align:left;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.Caixa a {
-    color: #32454b;
-}
-
-.Caixa a:hover {
-    color: #5a7b7f;
-}
-
 /* Aulas & Questões */
 
 .Conteudo-Aulas {
