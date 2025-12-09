@@ -16,10 +16,9 @@ pessoas com defiência visuais e auditivas.
 ![página inicial]()
 
 ## Funcionalidades principais:
-* Notificações de Novas Atividades e Correções
 * Login
 * Leitura em Libras
-* Audiolivro
+* Leitura em áudio
 * Vídeos e Questões sobre X matérias
 
 ## Fluxo de Navegação:
