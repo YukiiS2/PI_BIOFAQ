@@ -4,103 +4,63 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const dadosSite = {
         aulas: {
-            "videos/micro_aula01.mp4": {
-                titulo: "Introdução à Microbiologia",
-                texto: "Nesta aula inaugural, exploramos o que é a microbiologia, a história da descoberta dos microrganismos e sua importância fundamental para a vida na Terra. Abordamos a classificação dos principais grupos: bactérias, arquéias, fungos, protozoários, algas e vírus.",
-                materia: "Microbiologia"
+            "videos/cito_aula.mp4": {
+                "titulo": "Citologia: Estudo da Célula e Organelas",
+                "texto": "A disciplina desta aula é a <b>Citologia</b>, que é o estudo da célula, a <b>menor unidade funcional</b> do corpo. A aula se concentra nos tipos de células, suas estruturas e as funções das organelas. <br> <br> <b>Tipos Celulares</b> <br> <br> <b>Procariontes:</b> Não possuem núcleo definido (material genético disperso) e não têm organelas membranosas. Exemplos: Bactérias, Cianobactérias, Arqueas. <br> <br> <b>Eucariontes:</b> Possuem núcleo definido por uma membrana nuclear chamada carioteca e têm organelas membranosas. Exemplos: Animais, Vegetais e outros seres mais complexos. <br> <br> <b>Estrutura Comum:</b> Ambos os tipos celulares possuem <b>Ribossomos</b> (organela responsável pela <b>Síntese Proteica</b>). <br> <br> <b>Diferenciação Eucarionte (Animal vs. Vegetal)</b> <br> <br> <b>Célula Vegetal Possui:</b> <br> <ul> <li> <b>Parede Celular:</b> Ausente na célula animal. </li> <li> <b>Cloroplastos:</b> Organela exclusiva da célula vegetal, responsável pela fotossíntese. </li> <li> <b>Vacúolo:</b> Mais desenvolvido e central, para armazenar líquido e amido. </li> </ul> <br> <b>Função das Organelas Eucariontes</b> <br> <br> <b>Núcleo:</b> Armazena o material genético. Local da <b>Transcrição</b> (DNA para RNA). <br> <br> <b>Ribossomos:</b> Realizam a <b>Tradução</b> (RNA para Proteína). <br> <br> <b>Retículo Endoplasmático Rugoso (RER):</b> Síntese e dobramento de proteínas, possui ribossomos aderidos. <br> <br> <b>Retículo Endoplasmático Liso (REL):</b> Síntese de <b>Lipídios</b> e hormônios esteroides. <br> <br> <b>Complexo de Golgi:</b> <b>Empacotamento e Endereçamento</b> de substâncias (proteínas e lipídios). Muito desenvolvido em células secretoras. <br> <br> <b>Lisossomo:</b> Faz a <b>Lise</b> (quebra, degradação) e limpeza celular. <br> <br> <b>Mitocôndria:</b> É a <b>Usina Energética</b> da célula. Responsável pela <b>Respiração Celular</b> (produção de <b>ATP</b>). <br> <br> <b>Origem da Mitocôndria:</b> Possui membrana dupla e DNA próprio. Acredita-se ter vindo de um processo de <b>Endossimbiose</b> e seu DNA é de origem exclusivamente materna.",
+                "materia": "Citologia",
+                "transcricao": "https://docs.google.com/document/d/1ucyzArVUyk9ZP3rkX_nF4-3Ni5ymLFs8IsLZWEcJJc0/edit?usp=sharing",
+                "questId": "cito1"
             },
-            "videos/micro_aula02.mp4": {
-                titulo: "Estrutura Celular Bacteriana",
-                texto: "Um mergulho profundo na célula procariótica. Detalhamos as funções da parede celular, membrana plasmática, ribossomos, nucleoide e outras estruturas como flagelos e fímbrias, essenciais para a sobrevivência e patogenicidade bacteriana.",
-                materia: "Microbiologia"
+            "videos/cito_aula02.mp4": {
+                "titulo": "Citologia Avançada: Organelas e Introdução à Histologia",
+                "texto": "A disciplina desta aula é a <b>Citologia</b>, que é o estudo da célula, a <b>menor unidade funcional</b> do corpo. A aula se concentra nos tipos de células, suas estruturas e as funções das organelas, além de introduzir a organização celular em tecidos. <br> <br> <b>Estrutura Básica da Célula</b> <br> <br> Toda célula possui: <b>Membrana Plasmática</b> (circunda a célula), <b>Citoplasma</b> e <b>Material Genético</b>. <br> <br> <b>Procariontes:</b> Material genético disperso no citoplasma. <br> <br> <b>Eucariontes:</b> Material genético contido em um <b>Núcleo</b> bem definido. <br> <br> <b>Diferenciação Eucarionte (Animal vs. Vegetal)</b> <br> <br> <b>Célula Vegetal Possui:</b> <b>Cloroplasto</b> (responsável pela fotossíntese, convertendo energia luminosa em glicose) e <b>Parede Celular</b> definida, além da membrana plasmática. <br> <br> <b>Organelas Eucariontes (Funcionários da Fábrica)</b> <br> <br> <b>Núcleo:</b> Contém o material genético. <br> <br> <b>Retículo Endoplasmático Rugoso (RER):</b> Possui ribossomos aderidos, realiza **Síntese Proteica**. <br> <br> <b>Retículo Endoplasmático Liso (REL):</b> Realiza **Síntese de Lipídios**. <br> <br> <b>Complexo de Golgi:</b> Próximo à membrana plasmática, sua função é **empacotar e endereçar** proteínas e lipídios para exportação. <br> <br> <b>Mitocôndrias:</b> É a **usina energética** da célula. Responsável pela **Respiração Celular**, produzindo **ATP** (adenosina trifosfato), a moeda energética celular. <br> <br> <b>Peroxissomos:</b> Responsáveis pela produção de radicais livres. <br> <br> <b>Lisossomos:</b> Realizam a **Lise** (limpeza/degradação) celular. (Ex: Células do fígado possuem muitos lisossomos). <br> <br> <b>Organização Celular (Micrométrico ao Macrométrico)</b> <br> <br> Células com características em comum se agrupam para formar <b>Tecidos</b>, que formam <b>Órgãos</b> e, consequentemente, <b>Sistemas</b>. <br> <br> <b>Tipos Principais de Tecidos (Histologia)</b> <br> <ul> <li> <b>Tecido Epitelial:</b> Tecido de revestimento (ex: pele, o maior órgão do corpo). </li> <li> <b>Tecido Conjuntivo:</b> Tecido muito variado que compõe sangue, cartilagem, gordura e tecido ósseo. </li> <li> <b>Tecido Muscular:</b> Dividido em Liso (órgãos internos), Esquelético (força e movimento) e Cardíaco (contração especializada). </li> <li> <b>Tecido Nervoso:</b> O mais especializado, composto por neurônios e células da glia. </li> </ul>",
+                "materia": "Citologia/Histologia",
+                "transcricao": "https://docs.google.com/document/d/1gqIkmoar8Tdl2pOTn5hgI5hS9o7rwsdRJqtvvrgNgC4/edit?usp=sharing",
+                "questId": "cito2"
             },
-            "videos/micro_aula03.mp4": {
-                titulo: "Metabolismo e Crescimento Microbiano",
-                texto: "Como os microrganismos obtêm energia? Discutimos as principais vias metabólicas, como a glicólise e a respiração celular, e os fatores que influenciam o crescimento microbiano, como temperatura, pH e disponibilidade de nutrientes. Apresentamos as fases da curva de crescimento.",
-                materia: "Microbiologia"
-            },
-            "videos/micro_aula04.mp4": {
-                titulo: "Genética Bacteriana",
-                texto: "Esta aula aborda a organização do material genético em bactérias e os mecanismos de transferência de genes, como conjugação, transformação e transdução. Explicamos como esses processos contribuem para a rápida adaptação e resistência a antibióticos.",
-                materia: "Microbiologia"
-            },
-            "videos/macro_aula01.mp4": {
-                titulo: "Introdução ao Reino Animal",
-                texto: "Uma visão geral sobre a diversidade do Reino Animalia. Apresentamos os principais filos, desde poríferos e cnidários até cordados, destacando as características evolutivas chave, como simetria, tecidos corporais e desenvolvimento embrionário, que definem cada grupo.",
-                materia: "Macrobiologia"
-            },
-            "videos/macro_aula02.mp4": {
-                titulo: "Fisiologia Comparada: Sistema Digestório",
-                texto: "Analisamos as diferentes estratégias e estruturas que os animais desenvolveram para a digestão, desde a digestão intracelular em esponjas até os sistemas digestórios completos e especializados de vertebrados, relacionando a dieta de cada animal com sua anatomia.",
-                materia: "Macrobiologia"
-            },
-            "videos/macro_aula03.mp4": {
-                titulo: "Fisiologia Comparada: Sistema Respiratório",
-                texto: "Como os animais respiram? Comparamos as diversas formas de trocas gasosas: difusão direta, respiração cutânea, traqueal, branquial e pulmonar. Explicamos como cada sistema é adaptado ao ambiente em que o animal vive, seja aquático ou terrestre.",
-                materia: "Macrobiologia"
-            },
-            "videos/macro_aula04.mp4": {
-                titulo: "Padrões Reprodutivos nos Animais",
-                texto: "Esta aula explora a variedade de estratégias reprodutivas no reino animal, incluindo reprodução assexuada e sexuada, fecundação interna e externa, e os diferentes tipos de desenvolvimento, como ovíparo, vivíparo e ovovivíparo, com exemplos fascinantes.",
-                materia: "Macrobiologia"
+            "videos/eco_aula.mp4": {
+                "titulo": "Ecologia: Células Vegetais, Fotossíntese e Cadeia Alimentar",
+                "texto": "A disciplina desta aula é a <b>Ecologia</b>, que estuda as interações dos seres vivos entre si e com o ambiente. A aula se concentra no papel das plantas como base da vida e no fluxo de energia nas cadeias alimentares. <br> <br> <b>Células Vegetais e Fotossíntese</b> <br> <br> <b>Cloroplastos e Clorofila:</b> A cor verde das células vegetais deve-se à organela chamada cloroplasto, que contém clorofila. <br> <br> <b>Fotossíntese:</b> A clorofila realiza a fotossíntese, o processo pelo qual a planta produz seu próprio alimento. <br> <br> <b>Processo:</b> Usando a energia luminosa (raios solares), a planta converte água (absorvida pela raiz e levada às folhas) e gás carbônico em glicose (alimento) e oxigênio. A glicose é transportada pelo floema para nutrir a planta. <br> <br> <b>Cadeia e Teia Alimentar</b> <br> <br> <b>Base da Cadeia:</b> As plantas são a base da cadeia alimentar. Elas são seres <b>autótrofos</b> (produzem seu próprio alimento) e, por isso, são chamadas de <b>produtores</b> (primeiro nível trófico). <br> <br> <b>Consumidores:</b> Seres que se alimentam de outros, não produzindo seu próprio alimento, são <b>heterótrofos</b>. <br> <br> <b>Consumidores Primários:</b> Alimentam-se diretamente dos produtores (plantas). <br> <br> <b>Consumidores Secundários, Terciários, etc.:</b> Alimentam-se de outros consumidores. <br> <br> <b>Decompositores:</b> A cadeia alimentar sempre termina nos decompositores (<b>fungos e bactérias</b>). Eles são cruciais para a <b>ciclagem da matéria orgânica</b>, decompondo a matéria morta e retornando os nutrientes ao ambiente para serem usados novamente pelos produtores. <br> <br> <b>Importância Adicional:</b> Fungos e bactérias também têm funções econômicas (ex: fermentação alcoólica para etanol, fermentação láctica para iogurte). <br> <br> <b>Cadeia Linear vs. Teia:</b> A cadeia alimentar é a representação linear (produtor -> consumidores -> decompositores), enquanto a <b>teia alimentar</b> representa as interações alimentares complexas e emaranhadas que realmente ocorrem na ecologia. <br> <br> <b>Nível Trófico:</b> Refere-se à posição que um organismo ocupa na cadeia/teia alimentar (ex: produtor, consumidor primário, consumidor secundário). Um ser como o humano (onívoro) pode ocupar diferentes níveis tróficos, dependendo do que está consumindo.",
+                "materia": "Ecologia",
+                "transcricao": "https://docs.google.com/document/d/1znUxdN8H8fA8me0YRUGq-4stiNKOuLlSRksNZ4EfCAg/edit?usp=sharing",
+                "questId": "eco1"
             }
         },
         questoes: {
-            'micro1': {
-                titulo: "Questões de Microbiologia - Lista 1",
-                materia: "Microbiologia",
+            'cito1': {
+                titulo: "Questões de Citologia - Lista 1 (Estrutura Básica)",
+                materia: "Citologia",
+                videoId: "videos/cito_aula.mp4",
                 perguntas: [
-                    { p: "1. Qual destes microrganismos é um procarionte?", a: ["A) Vírus", "B) Bactéria", "C) Fungo", "D) Protozoário"], R: 1 },
-                    { p: "2. A penicilina é um tipo de:", a: ["A) Antiviral", "B) Antifúngico", "C) Antibiótico", "D) Vacina"], R: 2 }
+                    { p: "1. Qual é a principal característica que diferencia uma célula <b>procarionte</b> de uma célula <b>eucarionte</b>?", a: ["A) Presença de Ribossomos", "B) Presença de Membrana Plasmática", "C) Ausência de Núcleo definido", "D) Capacidade de realizar fotossíntese"], R: 2 },
+                    { p: "2. Qual organela está presente tanto em células procariontes quanto em eucariontes e tem a função de realizar a <b>síntese proteica</b>?", a: ["A) Mitocôndria", "B) Complexo de Golgi", "C) Ribossomo", "D) Lisossomo"], R: 2 },
+                    { p: "3. O material genético nas células procariontes está localizado:", a: ["A) Dentro do Núcleo", "B) No Citoplasma, na região do Nucleoide", "C) No Retículo Endoplasmático Rugoso", "D) Dentro do Vacúolo"], R: 1 },
+                    { p: "4. Qual das estruturas abaixo é **exclusiva** da célula vegetal em comparação com a célula animal?", a: ["A) Membrana Plasmática", "B) Mitocôndria", "C) Complexo de Golgi", "D) Cloroplasto"], R: 3 },
+                    { p: "5. A função principal da <b>Mitocôndria</b> é:", a: ["A) Empacotar proteínas", "B) Realizar Fotossíntese", "C) Produzir ATP (energia) pela respiração celular", "D) Fazer a lise e limpeza celular"], R: 2 }
                 ]
             },
-            'micro2': {
-                titulo: "Questões de Microbiologia - Lista 2",
-                materia: "Microbiologia",
+            'cito2': {
+                titulo: "Questões de Citologia - Lista 2 (Funções e Histologia)",
+                materia: "Citologia/Histologia",
+                videoId: "videos/cito_aula02.mp4",
                 perguntas: [
-                    { p: "1. O que é a pasteurização?", a: ["A) Um processo de congelamento rápido.", "B) Um processo para eliminar microrganismos pelo calor.", "C) Um método de cultura de bactérias.", "D) Um tipo de fermentação."], R: 1 }
+                    { p: "1. A organela responsável por **empacotar e endereçar** proteínas e lipídios para exportação é o(a):", a: ["A) Retículo Endoplasmático Liso", "B) Lisossomo", "C) Complexo de Golgi", "D) Peroxissomo"], R: 2 },
+                    { p: "2. O <b>Retículo Endoplasmático Rugoso (RER)</b> tem sua função primária associada à:", a: ["A) Síntese de Lipídios", "B) Síntese Proteica", "C) Produção de radicais livres", "D) Armazenamento de água"], R: 1 },
+                    { p: "3. Os <b>Lisossomos</b> desempenham qual papel essencial na célula?", a: ["A) Síntese de ATP", "B) Síntese de hormônios", "C) Lise e limpeza celular", "D) Absorção de luz"], R: 2 },
+                    { p: "4. A sequência correta da organização biológica, do micro ao macro, citada na aula é:", a: ["A) Sistema -> Órgão -> Tecido -> Célula", "B) Célula -> Sistema -> Órgão -> Tecido", "C) Célula -> Tecido -> Órgão -> Sistema", "D) Órgão -> Tecido -> Célula -> Sistema"], R: 2 },
+                    { p: "5. Qual dos seguintes não é um dos quatro tipos principais de tecido citados na aula (introdução à Histologia)?", a: ["A) Tecido Epitelial", "B) Tecido Conjuntivo", "C) Tecido Ósseo", "D) Tecido Nervoso"], R: 2 }
                 ]
             },
-            'micro3': {
-                titulo: "Questões de Microbiologia - Lista 3",
-                materia: "Microbiologia",
+            'eco1': {
+                titulo: "Questões de Ecologia - Lista 1 (Cadeia e Níveis Tróficos)",
+                materia: "Ecologia",
+                videoId: "videos/eco_aula.mp4",
                 perguntas: [
-                    { p: "1. Qual estrutura confere motilidade à maioria das bactérias?", a: ["A) Fímbrias", "B) Parede Celular", "C) Flagelo", "D) Cápsula"], R: 2 }
-                ]
-            },
-            'micro4': {
-                titulo: "Questões de Microbiologia - Lista 4",
-                materia: "Microbiologia",
-                perguntas: [
-                    { p: "1. O processo de transferência de material genético através de um 'pilus sexual' é chamado de:", a: ["A) Transformação", "B) Conjugação", "C) Transdução", "D) Mutação"], R: 1 }
-                ]
-            },
-            'macro1': {
-                titulo: "Questões de Macrobiologia - Lista 1",
-                materia: "Macrobiologia",
-                perguntas: [
-                    { p: "1. Qual destes animais é um mamífero?", a: ["A) Tubarão", "B) Pinguim", "C) Morcego", "D) Tartaruga"], R: 2 }
-                ]
-            },
-            'macro2': {
-                titulo: "Questões de Macrobiologia - Lista 2",
-                materia: "Macrobiologia",
-                perguntas: [
-                    { p: "1. Animais que possuem um sistema digestório com uma única abertura (boca/ânus) são chamados de:", a: ["A) Completos", "B) Incompletos", "C) Ausentes", "D) Complexos"], R: 1 }
-                ]
-            },
-            'macro3': {
-                titulo: "Questões de Macrobiologia - Lista 3",
-                materia: "Macrobiologia",
-                perguntas: [
-                    { p: "1. A respiração realizada através da pele, comum em anfíbios, é chamada de:", a: ["A) Pulmonar", "B) Traqueal", "C) Branquial", "D) Cutânea"], R: 3 }
-                ]
-            },
-            'macro4': {
-                titulo: "Questões de Macrobiologia - Lista 4",
-                materia: "Macrobiologia",
-                perguntas: [
-                    { p: "1. O desenvolvimento embrionário que ocorre dentro de um ovo, fora do corpo da mãe, é classificado como:", a: ["A) Vivíparo", "B) Ovíparo", "C) Ovovivíparo", "D) Metamorfose"], R: 1 }
+                    { p: "1. As plantas são classificadas como **produtores** (primeiro nível trófico) por serem seres:", a: ["A) Heterótrofos", "B) Onívoros", "C) Autótrofos", "D) Decompositores"], R: 2 },
+                    { p: "2. O processo realizado pelo <b>Cloroplasto</b>, que converte energia luminosa em glicose, é chamado de:", a: ["A) Respiração Celular", "B) Quimiossíntese", "C) Fotossíntese", "D) Transcrição"], R: 2 },
+                    { p: "3. Qual categoria de organismo é fundamental para a **ciclagem da matéria orgânica** na cadeia alimentar?", a: ["A) Consumidores Primários", "B) Produtores", "C) Consumidores Terciários", "D) Decompositores"], R: 3 },
+                    { p: "4. Se um ser humano se alimenta de uma alface, ele ocupa o nível de:", a: ["A) Produtor", "B) Consumidor Primário", "C) Consumidor Secundário", "D) Decompositor"], R: 1 },
+                    { p: "5. A representação mais **realista** das interações alimentares complexas na natureza é a:", a: ["A) Cadeia Alimentar", "B) Teia Alimentar", "C) Pirâmide de Energia", "D) Nível Trófico"], R: 1 }
                 ]
             }
         }
@@ -382,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function configurarTTS() {
-        let ttsAtivo = false;
+        let ttsAtivo = localStorage.getItem('tts_ativo') === 'true';
         const synth = window.speechSynthesis;
         const tagsPermitidas = ['P', 'H1', 'H2', 'H3', 'A', 'LI', 'SPAN', 'BUTTON', 'LABEL', 'INPUT', 'TH', 'TD', 'SVG'];
 
@@ -417,16 +377,19 @@ document.addEventListener('DOMContentLoaded', function() {
             osc.stop(ctx.currentTime + 0.1);
         }
 
-        if (document.title === "Página Inicial" && !sessionStorage.getItem('tts_aviso_mostrado')) {
+        if (document.title === "Página Inicial") {
             setTimeout(() => {
                 falar("Para ativar o leitor de tela aperte J");
-                sessionStorage.setItem('tts_aviso_mostrado', 'true');
             }, 500);
         }
 
         document.addEventListener('keydown', (e) => {
+            const tag = e.target.tagName.toLowerCase();
+            if (tag === 'input' || tag === 'textarea') return;
+            
             if (e.key.toLowerCase() === 'j') {
                 ttsAtivo = !ttsAtivo;
+                localStorage.setItem('tts_ativo', ttsAtivo);
                 falar(ttsAtivo ? "Leitor de tela ativado" : "Leitor de tela desativado");
             }
         });
@@ -517,6 +480,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 abrirModalQuestao(itemQuestao.dataset.questId);
                 return;
             }
+            
+            // Tratamento para botões dinâmicos de navegação entre modais
+            if (e.target.id === 'btn-ir-questoes') {
+                const questId = e.target.dataset.targetQuest;
+                const modalVideo = document.getElementById('video-popup');
+                if (modalVideo) {
+                     // Pausar vídeo antes de fechar
+                    const video = modalVideo.querySelector('video');
+                    if(video) video.pause();
+                    modalVideo.classList.remove('mostrar');
+                }
+                abrirModalQuestao(questId);
+                return;
+            }
+
+            if (e.target.id === 'btn-ir-aula') {
+                const videoId = e.target.dataset.targetVideo;
+                const modalQuest = document.getElementById('quest-popup');
+                if (modalQuest) {
+                    modalQuest.classList.remove('mostrar');
+                }
+                abrirModalVideo(videoId);
+                return;
+            }
+
             const botaoFechar = e.target.closest('.modal .botao-fechar, .modal .sobreposicao-modal, .modal-config .botao-fechar, .modal-config .sobreposicao-modal');
             if (botaoFechar) {
                 const modal = botaoFechar.closest('.modal, .modal-config');
@@ -546,10 +534,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const dadosDaAula = dadosSite.aulas[videoSrc];
         if (dadosDaAula && playerVideo) {
             playerVideo.src = videoSrc;
-            containerAulaEscrita.innerHTML = `
-                <h3>${dadosDaAula.titulo}</h3>
-                <p>${dadosDaAula.texto}</p>
-            `;
+            
+            let htmlConteudo = `<h3>${dadosDaAula.titulo}</h3><p>${dadosDaAula.texto}</p>`;
+            
+            // Adicionar botões se existirem links/referências
+            if (dadosDaAula.transcricao || dadosDaAula.questId) {
+                htmlConteudo += `<div class="botoes-aula-modal">`;
+                if (dadosDaAula.transcricao) {
+                    htmlConteudo += `<a href="${dadosDaAula.transcricao}" target="_blank" class="botao-modal-link">Ver Transcrição Completa</a>`;
+                }
+                if (dadosDaAula.questId) {
+                    htmlConteudo += `<button id="btn-ir-questoes" data-target-quest="${dadosDaAula.questId}" class="botao-modal-link">Ir para Questões</button>`;
+                }
+                htmlConteudo += `</div>`;
+            }
+
+            containerAulaEscrita.innerHTML = htmlConteudo;
+            
             modalVideo.classList.add('mostrar');
             playerVideo.play();
             const usuarioAtual = obterUsuarioAtual();
@@ -586,7 +587,15 @@ document.addEventListener('DOMContentLoaded', function() {
                      <div class="feedback" data-feedback-index="${indice}"></div>
                      </div>`;
         });
+        
+        html += `<div class="acoes-modal-questoes">`;
         html += `<button id="submit-quest" class="botao-config">Verificar Respostas</button>`;
+        
+        if (dadosQuestao.videoId) {
+            html += `<button id="btn-ir-aula" data-target-video="${dadosQuestao.videoId}" class="botao-modal-link">Ir para a Aula</button>`;
+        }
+        html += `</div>`;
+
         containerConteudoQuestao.innerHTML = html;
         modalQuestao.dataset.currentQuestId = idQuestao;
         modalQuestao.classList.add('mostrar');
