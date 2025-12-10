@@ -159,6 +159,30 @@ svg:hover + .Texto, svg:focus + .Texto {
     box-shadow: 0 2px 8px rgba(50,69,75,0.08);
 }
 
+/* Botão de Leitor de tela */
+
+#btn-tts {
+    position: fixed;
+    left: 0.7%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0066cc; 
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px 12px 12px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#btn-tts svg {
+    width: 30px;
+    height: 30px;
+}
+
 /* Pagina Inicial */
 
 .Conteudo {

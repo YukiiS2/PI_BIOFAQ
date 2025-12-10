@@ -345,16 +345,12 @@ document.addEventListener('DOMContentLoaded', function() {
         let ttsAtivo = localStorage.getItem('tts_ativo') === 'true';
         const synth = window.speechSynthesis;
         const tagsPermitidas = ['P', 'H1', 'H2', 'H3', 'A', 'LI', 'SPAN', 'BUTTON', 'LABEL', 'INPUT', 'TH', 'TD', 'SVG'];
-
         const navHome = document.querySelector('#topoesq a, #topoesq span');
         if (navHome) navHome.setAttribute('aria-label', 'Página Inicial');
-
         const navSearch = document.querySelector('#topodir > li > a');
         if (navSearch) navSearch.setAttribute('aria-label', 'Barra de Pesquisa');
-
         const navConteudo = document.getElementById('aulas');
         if (navConteudo) navConteudo.setAttribute('aria-label', 'Conteúdos');
-
         const navConta = document.querySelector('a[href="login.html"], a[href="config.html"]');
         if (navConta) navConta.setAttribute('aria-label', 'Conta');
 
@@ -377,9 +373,29 @@ document.addEventListener('DOMContentLoaded', function() {
             osc.stop(ctx.currentTime + 0.1);
         }
 
+        function alternarTTS() {
+            ttsAtivo = !ttsAtivo;
+            localStorage.setItem('tts_ativo', ttsAtivo);
+            falar(ttsAtivo ? "Leitor de tela ativado" : "Leitor de tela desativado");
+        }
+
+        if (!document.getElementById('btn-tts')) {
+            const btnTTS = document.createElement('div');
+            btnTTS.id = 'btn-tts';
+            btnTTS.title = "Ativar/Desativar Leitor de Tela (Tecla J)";
+            btnTTS.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                </svg>
+            `;
+            document.body.appendChild(btnTTS);
+            btnTTS.addEventListener('click', alternarTTS);
+        }
+
         if (document.title === "Página Inicial") {
             setTimeout(() => {
-                falar("Para ativar o leitor de tela aperte J");
+                falar("Para ativar o leitor de tela aperte J ou clique no botão a esquerda");
             }, 500);
         }
 
@@ -388,9 +404,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (tag === 'input' || tag === 'textarea') return;
             
             if (e.key.toLowerCase() === 'j') {
-                ttsAtivo = !ttsAtivo;
-                localStorage.setItem('tts_ativo', ttsAtivo);
-                falar(ttsAtivo ? "Leitor de tela ativado" : "Leitor de tela desativado");
+                alternarTTS();
             }
         });
 
